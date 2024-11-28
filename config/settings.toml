@@ -1,0 +1,3 @@
+[default]
+SQLALCHEMY_TRACK_MODIFICATIONS = false
+SQLALCHEMY_DATABASE_URI = 'mysql://songnhat:123456789@127.0.0.1/test_hong_an'

@@ -1,0 +1,7 @@
+flask==2.3.3
+flask-sqlalchemy==2.5.1
+marshmallow==3.21.2
+marshmallow-enum==1.5.1
+webargs==8.4.0
+sqlalchemy==1.4.52
+dynaconf[toml]==2.2.3

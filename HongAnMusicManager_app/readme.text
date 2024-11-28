@@ -1,0 +1,73 @@
+- config sql_uri in config file
+- all api if has error will reponse {"error" : "...."}
+- api create: POST /music_wave/add
+    request: {
+        file_mp3 = String
+        file_background = String
+        file_dance = String
+        file_output = String
+        gen_sin = Boolean
+        status = "WAIT" | "RUNNING" | "DONE" | "ERROR"
+    }
+
+    response: {
+        id = Integer
+        file_mp3 = String
+        file_background = String
+        file_dance = String
+        file_output = String
+        gen_sin = Boolean 
+        time_created = TIMESTAMP
+        status = "WAIT" | "RUNNING" | "DONE" | "ERROR"
+    }
+
+- api search: GET /music_wave/search
+    request (params): {
+        id = Integer
+        file_mp3 = String
+        file_background = String
+        file_dance = String
+        file_output = String
+    }
+
+    response: [
+        {
+        id = Integer
+        file_mp3 = String
+        file_background = String
+        file_dance = String
+        file_output = String
+        gen_sin = Boolean
+        time_created = TIMESTAMP
+        status = "WAIT" | "RUNNING" | "DONE" | "ERROR"
+        }
+    ]
+
+- api update: POST /music_wave/update
+    request: {
+        id = Integer
+        file_mp3 = String
+        file_background = String
+        file_dance = String
+        file_output = String
+        gen_sin = Boolean
+        status = "WAIT" | "RUNNING" | "DONE" | "ERROR"
+    }
+
+    response: {
+        id = Integer
+        file_mp3 = String
+        file_background = String
+        file_dance = String
+        file_output = String
+        gen_sin = Boolean
+        time_created = TIMESTAMP
+        status = "WAIT" | "RUNNING" | "DONE" | "ERROR"
+    }
+
+- api delete: DELETE /music_wave/delete
+    request (params) {
+        id = Integer
+    }
+
+    response {}
